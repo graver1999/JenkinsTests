@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeSuite;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-    private final static String CHROMEDRIVER_PATH = "./src/test/resources/chromedriver.exe";
+    private final static String CHROMEDRIVER_PATH = "C:\\Program Files (x86)\\Jenkins/chromedriver.exe";
 
     private static WebDriver instance;
 
