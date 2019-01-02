@@ -1,5 +1,6 @@
 package by.bsu.pagefactoryselenium;
 
+//import com.sun.org.apache.xml.internal.utils.SystemIDResolver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -53,6 +54,11 @@ public class HomePageTest {
         action.filltheManageForm("test", "123456");
         action.continueInManageForm();
         SearchResultsPage resultsPage = PageFactory.initElements(driver, SearchResultsPage.class);
+        try {
+            Thread.sleep(5000);
+        }catch (Exception ex){
+            System.out.print(ex.getMessage());
+        }
         Assert.assertTrue(resultsPage.getIsErrorEqualsToExpected(ERROR_MESSAGE));
     }
 
